@@ -1,0 +1,7 @@
+{
+	"prefix" : "/test"
+	, "middlewares" : []
+	, "routes" : [
+	["get", "/", "Test.index"]
+	]
+}
