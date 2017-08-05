@@ -1,0 +1,38 @@
+{
+  "name": "mailservice",
+  "version": "1.0.0",
+  "description": "mailservice",
+  "main": "bin/www",
+  "scripts": {
+    "test": "mocha test/helpers/Utils.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firyalff/mailService.git"
+  },
+  "keywords": [
+    "mailservice",
+    "node",
+    "mail"
+  ],
+  "author": "firyalff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firyalff/mailService/issues"
+  },
+  "homepage": "https://github.com/firyalff/mailService#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.1",
+    "lusca": "^1.4.1",
+    "newrelic": "^2.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "proxyquire": "^1.8.0",
+    "sinon": "^3.0.0"
+  }
+}
