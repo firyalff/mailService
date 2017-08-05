@@ -1,0 +1,10 @@
+const appConfig = require(`${process.env.PWD}/configs/app`)
+
+process.env.NODE_ENV = appConfig.environment
+
+const app = require('../app')
+, newrelic = require('newrelic')
+
+app.listen(appConfig.port, () => {
+	console.log(`API listening at port ${appConfig[process.env.NODE_ENV].port}`);
+});
