@@ -1,0 +1,7 @@
+{
+	"app_name": ["yourappname"]
+	, "license_key": "licensekeygoeshere"
+	, "logging": {
+		"level": "info"
+	}
+}
