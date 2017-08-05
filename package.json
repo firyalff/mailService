@@ -4,7 +4,7 @@
   "description": "mailservice",
   "main": "bin/www",
   "scripts": {
-    "test": "mocha test/helpers/Utils.js"
+    "test": "mocha test/endpoints/Test.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
     "proxyquire": "^1.8.0",
-    "sinon": "^3.0.0"
+    "sinon": "^3.0.0",
+    "supertest": "^3.0.0"
   }
 }
