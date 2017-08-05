@@ -7,11 +7,12 @@ var registeredMiddlewares = {};
 Utils.promisedFS(__dirname)
 .then(files => {
 	files
-	.map( filename => {
-		if(filename !== "index.js") {
-			var ctrlName = filename.split('.')[0];
-			registeredMiddlewares[ctrlName] = require(`${process.env.PWD}/app/controllers/${filename}`)
-		}
+	.filter( filename => {
+		return filename !== 'index.js' 
+	})
+	.forEach( (mdlwrName, index) => {
+		var mdlwrName = mdlwrName.split('.')[0];
+		registeredMiddlewares[ctrlName] = require(`${process.env.PWD}/app/controllers/${mdlwrName}`)
 	})
 })
 .catch( err => {
