@@ -7,6 +7,8 @@ else
 
 const app = require('express')()
 
+require(`${process.env.PWD}/app/kernels/ErrHandler`)(app);
+
 require(`${process.env.PWD}/app/kernels/Http`)(app);
 require(`${process.env.PWD}/app/kernels/Validator`)(app);
 require(`${process.env.PWD}/app/kernels/Security`)(app);
