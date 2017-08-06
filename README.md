@@ -30,4 +30,5 @@ mailgun.
 	- Express JS team, for providing awesome basic routing and middleware functions
 	- Automattic, for providing kue as the main module behind the worker
 	- Facebook, react is awesome
+	- bryantheastronaut for awesome MERN stack tutorial ( https://github.com/bryantheastronaut/mernCommentBox )
 
