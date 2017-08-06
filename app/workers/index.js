@@ -3,19 +3,9 @@
 const Utils = require(`${process.env.PWD}/app/helpers/Utils`)
 , jobRegistrar = (jobEngine, workerName, workerMethods) => {
 	for (var key in workerMethods) {
-
 		jobEngine.process(`${workerName}.${key}`, function (job, done){
-			var promisedProcess = (data) => { 
-				return new Promise((resolve, reject) => {
-					resolve(workerMethods[`${key}`](job.data))
-				})
-			}
-
-			promisedProcess(job.data)
-			.then( (value) => {
-				done && done();
-			})
-		});
+			var workResult = workerMethods[`${key}`](job.data, done)
+		})
 	}
 }
 
