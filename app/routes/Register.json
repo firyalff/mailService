@@ -1,0 +1,7 @@
+{
+	"prefix" : "/register"
+	, "middlewares" : []
+	, "routes" : [
+	["post", "/", "Register.store"]
+	]
+}
