@@ -1,7 +1,8 @@
 {
-	"prefix" : "/mailer"
+	"prefix" : "/mail"
 	, "middlewares" : []
 	, "routes" : [
-	["post", "/", "Mail.store"]
+	["get", "/", "Mail.index"]
+	, ["post", "/", "Mail.store"]
 	]
 }
