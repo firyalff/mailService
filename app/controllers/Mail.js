@@ -4,7 +4,9 @@ const Models = require(`${process.env.PWD}/app/models`)
 , APIFormat = require(`${process.env.PWD}/app/helpers/ResponseFormat`)
 , WorkerRegister= require(`${process.env.PWD}/app/kernels/QueueWorker`)
 , methods = {
-	store(req, res, next) {
+    index(req, res, next) {
+	}
+    , store(req, res, next) {
 		req.assert('from', 'Invalid from').isEmail();
         req.assert('to', 'Invalid to').isEmail();
         req.assert('subject', 'Invalid subject').notEmpty();
@@ -22,10 +24,10 @@ const Models = require(`${process.env.PWD}/app/models`)
 
         WorkerRegister('Mailer.sendMail'
             , {
-                from: 'firyalff@firyal.mail'
-                , to: 'firyal.fakhrilhadi@gmail.com'
-                , subject: 'lomer mail'
-                , content: 'Lorem Upsim Lodor Tis atem'
+                from: req.body.from
+                , to: req.body.to
+                , subject: req.body.subject
+                , content: req.body.content
                 , mailService: 'sendgrid'
             })
 
