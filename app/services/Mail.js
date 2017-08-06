@@ -1,4 +1,6 @@
 const MailConfig = require(`${process.env.PWD}/configs/mail`)
+, Models = require(`${process.env.PWD}/app/models`)
+, WorkerRegister= require(`${process.env.PWD}/app/kernels/QueueWorker`)
 , methods = {
 	sendgrid(data, done){
 		const SendgridMail = require('sendgrid').mail
@@ -18,8 +20,13 @@ const MailConfig = require(`${process.env.PWD}/configs/mail`)
 
 		Sendgrid.API(request, function (err, response) {
 			if (err) {
-				console.log(err)
-				done(err)
+				console.error(err)
+				
+				data.mailService = 'mailgun'
+
+				var retry = WorkerRegister('Mailer.sendMail', data)
+				
+				done(retry)
 			}
 			else {
 				console.log(response)
@@ -49,8 +56,12 @@ const MailConfig = require(`${process.env.PWD}/configs/mail`)
 
 		NodemailerMailgun.sendMail(mail, function (err, info) {
 			if (err) {
-				console.log('Error: ' + err);
-				done(err)
+				console.error(err)
+				data.mailService = 'sendgrid'
+
+				var retry = WorkerRegister('Mailer.sendMail', data)
+				
+				done(retry)
 			}
 			else {
 				console.log('Response: ' + info);
@@ -59,5 +70,7 @@ const MailConfig = require(`${process.env.PWD}/configs/mail`)
 		});
 	}
 }
+
+
 
 module.exports = methods
