@@ -3,5 +3,9 @@
 	, "middlewares" : []
 	, "routes" : [
 	["get", "/", "Test.index"]
+	, ["get", "/show", "Test.show"]
+	, ["get", "/worker", "Test.tryWorker"]
+	, ["post", "/", "Test.store"]
+	, ["delete", "/:id", "Test.destroy"]
 	]
 }
