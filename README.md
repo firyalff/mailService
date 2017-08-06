@@ -1,6 +1,6 @@
 # Node MailService
 
-Worker based mail sender using node js and react. MailService automatically switch mail provider when the worker fail to complete mail sending task.
+Worker based mail sender using node js and react. MailService automatically switch mail provider when the worker fail to complete mail sending task while using one mail service API.
 
 
 ## Installation
