@@ -22,13 +22,16 @@
   },
   "homepage": "https://github.com/firyalff/mailService#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-validator": "^3.2.1",
     "kue": "^0.11.6",
     "lusca": "^1.4.1",
     "mongoose": "^4.11.5",
-    "newrelic": "^2.0.2"
+    "newrelic": "^2.0.2",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^4.1.0",
