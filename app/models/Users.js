@@ -1,6 +1,5 @@
 'use strict'
 const mongoose = require('mongoose')
-, bcrypt = require('bcryptjs')
 , Schema = mongoose.Schema
 , UsersSchema = new Schema({
 	username: {
@@ -28,15 +27,5 @@ UsersSchema.pre('save', function(callback) {
 		callback()
 	})
 })
-
-UsersSchema.methods.verifyPassword = (password, cb) => {
-	bcrypt.compare(password, this.password, function(err, isMatch) {
-		if (err){
-			return cb(err);
-		}
-
-		cb(null, isMatch);
-	});
-};
 
 module.exports = mongoose.model('Users', UsersSchema)
