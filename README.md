@@ -7,14 +7,18 @@ Worker based mail sender using node js and react. MailService automatically swit
 after cloning this repository, create copy configSample folder to configs, then add your own configuration keys to each json file
 
 Run 
+```
 	$npm install
+```
+
 to install dependencies
 
 Be noticed that MailService need redis in your local, so kue as the queue worker can run.
 
 to run MailService in your local run
+```
 	$npm run start-dev
-
+```
 for MongoDB, you can host your own free server in mlab.
 
 
