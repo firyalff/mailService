@@ -1,0 +1,7 @@
+{
+	"username": "dbuser"
+	, "password": "dbpwd"
+	, "domain": "db.domain.com"
+	, "port": 27017
+	, "database": "dbname"
+}
