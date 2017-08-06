@@ -1,6 +1,11 @@
 {
-	"driver" : "mailgun"
-	, "credentials": {
-		"mailgun": {}
+	"credentials": {
+		"sendgrid": {
+			"key": "yourkey"
+		}
+		, "mailgun": {
+			"api_key": "yourkey"
+			, "domain": "yourdomain"
+		}
 	}
 }
