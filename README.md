@@ -20,6 +20,11 @@ to run MailService in your local run
 	$npm run start-dev
 ```
 
+to run MailService API in your local run
+```
+	$node bin/www
+```
+
 to run test for this project, run
 ```
 	$npm run test
