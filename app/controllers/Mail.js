@@ -31,7 +31,7 @@ const Models = require(`${process.env.PWD}/app/models`)
                 , mailService: 'sendgrid'
             })
 
-        return res.json(APIFormat.response(
+        return res.status(201).json(APIFormat.response(
                 'Mail sent'
                 , {}
                 ))
