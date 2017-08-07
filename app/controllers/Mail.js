@@ -32,7 +32,7 @@ const Models = require(`${process.env.PWD}/app/models`)
             })
 
         return res.json(APIFormat.response(
-                'Sending mail'
+                'Mail sent'
                 , {}
                 ))
     }
