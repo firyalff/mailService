@@ -32,6 +32,8 @@ to run test for this project, run
 
 for MongoDB, you can host your own free server in mlab.
 
+you can put mongoDB configuration in `./configs/database.json`, config file sample provided also in sampleConfigs folder
+
 This project also utilize new-relic server monitoring to log server activity and errors by using official newrelic nodejs module.
 
 You can setup your own monitoring by replacing new relic config file in `./configs/monitoring.json`, config file sample provided also in sampleConfigs folder
