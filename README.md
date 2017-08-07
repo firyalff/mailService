@@ -32,3 +32,5 @@ mailgun.
 	- Facebook, react is awesome
 	- bryantheastronaut for awesome MERN stack tutorial ( https://github.com/bryantheastronaut/mernCommentBox )
 
+
+NOTE: Please refer to APIdocs.md for API documentation
