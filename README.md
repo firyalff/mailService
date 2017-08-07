@@ -21,6 +21,10 @@ to run MailService in your local run
 ```
 for MongoDB, you can host your own free server in mlab.
 
+This project also utilize new-relic server monitoring to log server activity and errors by using official newrelic nodejs module.
+
+You can setup your own monitoring by replacing new relic config file in `./configs/monitoring.json`, config file sample provided also in sampleConfigs folder
+
 
 ## Mail Provider
 Currently, MailService supports only two mail service, sendgrid and 
