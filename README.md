@@ -19,6 +19,12 @@ to run MailService in your local run
 ```
 	$npm run start-dev
 ```
+
+to run test for this project, run
+```
+	$npm run test
+```
+
 for MongoDB, you can host your own free server in mlab.
 
 This project also utilize new-relic server monitoring to log server activity and errors by using official newrelic nodejs module.
