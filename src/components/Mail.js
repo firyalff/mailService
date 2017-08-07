@@ -10,7 +10,7 @@ class Mail extends Component {
       author: '',
       text: ''
     };
-    //binding all our functions to this class
+
     this.deleteMail = this.deleteMail.bind(this);
     this.updateMail = this.updateMail.bind(this);
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
@@ -19,7 +19,7 @@ class Mail extends Component {
   }
   updateMail(e) {
     e.preventDefault();
-    //brings up the update field when we click on the update link.
+    
     this.setState({ toBeUpdated: !this.state.toBeUpdated });
   }
   handleMailUpdate(e) {
@@ -53,32 +53,7 @@ class Mail extends Component {
   }
   render() {
     return (
-      <div style={ style.mail }>
-        <h3>{this.props.author}</h3>
-        <span dangerouslySetInnerHTML={ this.rawMarkup() } />
-        <a style={ style.updateLink } href='#' onClick={ this.updateMail }>update</a>
-        <a style={ style.deleteLink } href='#' onClick={ this.deleteMail }>delete</a>
-        { (this.state.toBeUpdated)
-          ? (<form onSubmit={ this.handleMailUpdate }>
-              <input
-                type='text'
-                placeholder='Update name...'
-                style={ style.mailFormAuthor }
-                value={ this.state.author }
-                onChange= { this.handleAuthorChange } />
-              <input
-                type='text'
-                placeholder='Update your mail...'
-                style= { style.mailFormText }
-                value={ this.state.text }
-                onChange={ this.handleTextChange } />
-              <input
-                type='submit'
-                style={ style.mailFormPost }
-                value='Update' />
-            </form>)
-          : null}
-      </div>
+      <span></span>
     )
   }
 }

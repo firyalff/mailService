@@ -24,6 +24,9 @@ class MailBox extends Component {
     let newMails = mails.concat([mail]);
     this.setState({ data: newMails });
     axios.post(`${this.props.url}/mail`, mail)
+      .then( success => {
+        alert(success.data.message)
+      })
       .catch(err => {
         console.error(err);
         this.setState({ data: mails });
